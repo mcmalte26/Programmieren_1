@@ -78,11 +78,11 @@ public class Uebung04 {
 		}
 
 		int[][] result = new int[rowsA][columnsB];
-		for (int i = 0; i < rowsA; i++) {
-			for (int j = 0; j < columnsB; j++) {
-				result[i][j] = 0;
-				for (int k = 0; k < columnsA; k++) {
-					result[i][j] += matrixA[i][k] * matrixB[k][j];
+		for (int row = 0; row < rowsA; row++) {
+			for (int column = 0; column < columnsB; column++) {
+				result[row][column] = 0;
+				for (int colA = 0; colA < columnsA; colA++) {
+					result[row][column] += matrixA[row][colA] * matrixB[colA][column];
 				}
 
 			}
